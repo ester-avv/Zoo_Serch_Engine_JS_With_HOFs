@@ -33,4 +33,6 @@ const handlerElephants = (param) => {
   return computeData(param, elephants);
 };
 
+console.log(handlerElephants('residents'));
+
 module.exports = handlerElephants;
