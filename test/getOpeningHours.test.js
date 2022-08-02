@@ -37,4 +37,16 @@ describe('Testes da função getOpeningHours', () => {
     const errorWarning = 'he minutes must be between 0 and 59';
     expect(() => getOpeningHours('Wednesday', '02:60-PM')).toThrow(errorWarning);
   });
+  it('Verifica se quando a função recebe parametros vazios, ela retorna o horário de funcionamento', () => {
+    const workingHours = {
+      Tuesday: { open: 8, close: 6 },
+      Wednesday: { open: 8, close: 6 },
+      Thursday: { open: 10, close: 8 },
+      Friday: { open: 10, close: 8 },
+      Saturday: { open: 8, close: 10 },
+      Sunday: { open: 8, close: 8 },
+      Monday: { open: 0, close: 0 },
+    };
+    expect(getOpeningHours()).toEqual(workingHours);
+  });
 });
