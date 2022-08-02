@@ -35,9 +35,8 @@ describe('Testes da função HandlerElephants', () => {
   it('Verifica se o nome Jefferson está entre os elefantes que moram neste zoológico', () => {
     expect(handlerElephants('names').includes('Jefferson')).toBeTruthy();
   });
-  
+
   it('Verifica se quando passada uma string que não contempla uma funcionalidade retorna null', () => {
     expect(handlerElephants('localização')).toBeNull();
   });
-
 });

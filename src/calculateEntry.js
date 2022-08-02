@@ -1,11 +1,9 @@
 const data = require('../data/zoo_data');
 
 function countEntrants(entrants) {
- if (!entrants){
-  return 0
- }
- 
-
+  if (!entrants) {
+    return 0;
+  }
 }
 
 function calculateEntry(entrants) {
